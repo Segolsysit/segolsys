@@ -1,0 +1,15 @@
+.form-field .error-txt{
+    font-size: 14.5px;
+    color: #d93025;
+    text-align: left;
+    margin: -5px 0px 3px;
+    display: none;
+}
+
+.form-field.error .form-control {
+    border-color: #d93025;
+}
+
+.form-field.error .error-txt{
+    display: block;
+}

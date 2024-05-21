@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="assets/css/common-style.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
+        <!-- Adding Error text display in css -->
+        <link rel="stylesheet" href="./assets/css/modified css/error-txt.css">
+
 </head>
 
 <body>
@@ -50,8 +53,8 @@
                             </li>
                             <li><a href='projects.html'>Projects</a>
                                 <ul>
-                                    <li><a href='projectscons.html'>Our Projects</a></li>
-                                    <li><a href='project-details-cons.html'>Project Details</a></li>
+                                    <li><a href='projects.html'>Our Projects</a></li>
+                                    <li><a href='project-details.html'>Project Details</a></li>
                                     <li><a href='faqs.html'>Help &amp; FAQ's</a></li>
                                 </ul>
                             </li>
@@ -137,25 +140,40 @@
                             <p>Let’s talk about your business ideas. Our expert team is ready to help you grow your business </p>
                         </div>
                         <div class="contact-form">
-                            <form action="https://te.dynamiclayers.net/Segolsys/php/contact.php" method="post" id="ajax_contact" class="form-horizontal">
+                            <!--<form action="https://te.dynamiclayers.net/softgen/php/contact.php" method="post"
+id="ajax_contact" class="form-horizontal">-->
+                            <form id="ajax_contact" class="form-horizontal">
                                 <div class="contact-form-group">
+                                    <!-- added id for getting values in the js-->
                                     <div class="form-field">
-                                        <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First Name" required="">
+                                        <input type="text" id="firstname" name="firstname" class="form-control"
+                                            placeholder="First Name" required="">
+                                        <div class="error-txt">First Name can't be blank!</div>
                                     </div>
                                     <div class="form-field">
-                                        <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last Name" required="">
+                                        <input type="text" id="lastname" name="lastname" class="form-control"
+                                            placeholder="Last Name" required="">
+                                        <div class="error-txt">Last Name can't be blank!</div>
                                     </div>
                                     <div class="form-field">
-                                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required="">
+                                        <input type="email" id="email" name="email" class="form-control"
+                                            placeholder="Email" required="">
+                                        <div class="error-txt email">Email can't be blank!</div>
                                     </div>
                                     <div class="form-field">
-                                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone Number" required="">
+                                        <input type="text" id="phone" name="phone" class="form-control"
+                                            placeholder="Phone Number" required="">
+                                        <div class="error-txt phn">Phone Number can't be blank</div>
                                     </div>
                                     <div class="form-field message">
-                                        <textarea id="message" name="message" cols="30" rows="4" class="form-control" placeholder="Message" required=""></textarea>
+                                        <textarea id="message" name="message" cols="30" rows="4" class="form-control"
+                                            placeholder="Message" required=""></textarea>
+                                        <div class="error-txt">Message can't be blank!</div>
                                     </div>
                                     <div class="form-field submit-btn">
-                                        <button id="submit" class="default-btn" type="submit">Send Massage</button>
+                                        <!-- Changed button id from submit to test-->
+                                        <button id="submit" class="default-btn" type="submit">Send
+                                            Message</button>
                                     </div>
                                 </div>
                                 <div id="form-messages" class="alert" role="alert"></div>
@@ -267,8 +285,16 @@
     <script src="assets/js/vendor/scroll-trigger.min.js"></script>
     <script src="assets/js/vendor/parallax-scroll.min.js"></script>
     <script src="assets/js/mailchimp.js"></script>
-    <script src="assets/js/contact.js"></script>
+    <!-- <script src="assets/js/contact.js"></script> -->
     <script src="assets/js/main.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+
+      <!--Additionally added sccripts-->
+      <script type="module" src="assets/js/firebasehandler.js"></script>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </body>
 
